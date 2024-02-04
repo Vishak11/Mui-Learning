@@ -17,7 +17,7 @@ import StorefrontIcon from "@mui/icons-material/Storefront";
 import GroupsIcon from "@mui/icons-material/Groups";
 import Brightness3Icon from "@mui/icons-material/Brightness3";
 import PeopleIcon from "@mui/icons-material/People";
-const SideBar = () => {
+const SideBar = ({setMode,mode}) => {
   return (
     <Box
       position="sticky"
@@ -96,7 +96,7 @@ const SideBar = () => {
             <ListItemIcon>
               <Brightness3Icon />
             </ListItemIcon>
-            <Switch defaultChecked />
+            <Switch onChange={e=>setMode(mode==="light"?"dark":"light")} />
           </ListItemButton>
         </ListItem>
       </List>
